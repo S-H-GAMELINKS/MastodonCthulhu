@@ -1,7 +1,6 @@
 require "mastodon_cthulhu/version"
 require "mastodon_cthulhu/convert"
 require "mastodon_cthulhu/convert_random"
-require "mastodon_cthulhu/convert_lang"
 require "mastodon_cthulhu/statuses_controller"
 
 module MastodonCthulhu
