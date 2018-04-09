@@ -22,7 +22,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- Make initializers file  
+config\initializers\mastodon_cthulhu.rb
+
+```ruby
+MastodonCthulhu.setup do |status|	
+  	
+　# クトゥルフ神話機能	
+  fortune = MastodonCommand::Random.new('[ 　\n]?#(おみくじ|占い|運勢)[ 　\n]?', %w(いあいあくとぅるぅ いあいあはすたぁ いあいあつとぅぁぐぁ ふんぐるいむぐるうなふ うがふなぐる ふたぐん))
+  status = fortune.convert(status) if fortune.match(status)	
+
+end
+```
 
 ## Development
 
@@ -39,3 +50,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## ref
+
+[mastodon_command](https://github.com/kenchiki/mastodon_command)
